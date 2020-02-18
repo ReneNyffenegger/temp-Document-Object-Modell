@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>DOM: atributes</title>
+
+
+  <script type="text/javascript">
+
+    function main() {
+       var foo = document.getElementById('foo');
+       console.log(foo.style);
+
+       console.log('iterating over styles:');
+       foo.getAttributeNames().forEach(function(attrName, ix) {
+
+          console.log('  ' + attrName + ': ' + foo.getAttribute(attrName));
+
+       });
+
+    }
+
+  </script>
+
+
+</head>
+<body onload='main()'>
+
+  <div
+     id    ='foo'
+     style ='background-color:yellow; width:80px; height: 30px'
+     txt   ='Hello world'
+     num   = 42>
+
+        Some text.
+
+  </div>
+
+</body>
+</html>
